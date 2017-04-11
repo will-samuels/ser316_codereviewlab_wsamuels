@@ -1,9 +1,13 @@
 package banking.primitive.core;
 
+/**
+ * @author gusboh
+ *
+ */
 public abstract class Account implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
-    protected enum State {
+    public enum State {
         OPEN, CLOSED, OVERDRAWN
     };
 
@@ -57,14 +61,19 @@ public abstract class Account implements java.io.Serializable {
     public abstract boolean withdraw(float amount);
 
     /**
-     * @return either "Checking" or "Savings"
+     * declaration of getters and setters for states
      */
     public abstract String getType();
 
+    /**
+     * getter that returns state
+     */
     protected final State getState() {
         return state;
     }
-
+    /**
+     * setter that sets state
+     */
     protected final void setState(State s) {
         state = s;
     }
