@@ -9,6 +9,11 @@ public class Checking extends Account {
 		super(name);
 	}
 
+    /**
+     * A constructor that creates a checking account
+     * @param name
+     * @return Checking
+     */
     public static Checking createChecking(String name) {
         return new Checking(name);
     }
