@@ -1,9 +1,6 @@
 package banking.primitive.core;
 
-/**
- * @author gusboh
- *
- */
+
 public abstract class Account implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -15,13 +12,13 @@ public abstract class Account implements java.io.Serializable {
     protected String name;
     private State state;
 
-    protected Account(String n) {
-        name = n;
+    protected Account(String _name) {
+        name = _name;
         state = State.OPEN;
     }
 
-    protected Account(String n, float b) {
-        this(n); 
+    protected Account(String _name, float b) {
+        this(_name); 
         balance = b;
     }
 
