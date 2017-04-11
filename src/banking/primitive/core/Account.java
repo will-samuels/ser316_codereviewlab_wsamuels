@@ -19,7 +19,7 @@ public abstract class Account implements java.io.Serializable {
 
     protected Account(String _name, float _balance) {
         this(_name); 
-        balance = balance;
+        balance = _balance;
     }
 
     /**
